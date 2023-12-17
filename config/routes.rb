@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :blogs
+  resources :blogs, only: [:index, :show]
+
+  namespace :admin do
+    resources :sessions, only: [:new, :create]
+    get 'session' => 'admin/session#new'
+    post 'session' => 'admin/session#create'
+    resources :blogs
+  end
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
