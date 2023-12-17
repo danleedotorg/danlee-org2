@@ -1,0 +1,60 @@
+<nav data-controller="navbar" class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      DanLee.org
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-navbar-target="navBurger"  data-action="click->navbar#toggleMobileMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu"  data-navbar-target="navMenu">
+    <div class="navbar-start">
+      <a href="/blog" class="navbar-item">
+        Blog
+      </a>
+
+      <a href="/about" class="navbar-item">
+        About
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Links
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="https://www.youtube.com/@danleedotorg" target="_blank" class="navbar-item">
+            Youtube
+          </a>
+          <a href="https://github.com/danleedotorg" target="_blank"  class="navbar-item">
+            Github
+          </a>
+          <a href="https://stackoverflow.com/users/10784143/daniel-lee" target="_blank" class="navbar-item">
+            Stack Overflow
+          </a>
+          <!--            <hr class="navbar-divider">-->
+          <!--            <a class="navbar-item">-->
+          <!--              Report an issue-->
+          <!--            </a>-->
+        </div>
+      </div>
+    </div>
+
+    <!--      <div class="navbar-end">-->
+    <!--        <div class="navbar-item">-->
+    <!--          <div class="buttons">-->
+    <!--            <a class="button is-primary">-->
+    <!--              <strong>Sign up</strong>-->
+    <!--            </a>-->
+    <!--            <a class="button is-light">-->
+    <!--              Log in-->
+    <!--            </a>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+  </div>
+</nav>
