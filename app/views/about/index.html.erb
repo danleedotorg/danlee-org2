@@ -1,0 +1,45 @@
+<div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+
+
+<h1 class="is-size-1">
+  About Me
+</h1>
+
+  <h2 class="is-size-2">Quick Facts</h2>
+
+<table class="table is-bordered is-striped is-narrow">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Daniel Lee</td>
+    </tr>
+    <tr>
+      <td>Profession</td>
+      <td>Software Engineer</td>
+    </tr>
+    <tr>
+      <td>Years of Experience</td>
+      <td><%= distance_of_time_in_words_to_now(Time.new(2018, 5, 1)) %></td>
+    </tr>
+    <tr>
+      <td>Speciality</td>
+      <td>Ruby on Rails, React, and SQL</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<hr style="min-width: 80vw" />
+<h2 class="is-size-2" id="jobHistory">Job History</h2>
+  <section style="min-width: 70vw">
+    <%= render 'about/job_history/dish_network' %>
+    <%= render 'about/job_history/dish_network' %>
+
+  </section>
+</div>

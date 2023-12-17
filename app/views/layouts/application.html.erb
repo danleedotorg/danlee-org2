@@ -10,8 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="has-background-dark has-text-light">
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <main class="container ">
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<nav data-controller="navbar" class="navbar" role="navigation" aria-label="main navigation">
+<nav data-controller="navbar" class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       DanLee.org
@@ -17,9 +17,10 @@
         Blog
       </a>
 
-      <a href="/about" class="navbar-item">
-        About
+      <a href="<%= about_index_path %>#jobHistory" class="navbar-item">
+        Job History
       </a>
+
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
