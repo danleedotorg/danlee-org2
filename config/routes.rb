@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :technologies, controller: 'admin/technologies'
   get 'about/index'
   resources :blogs, only: [:index, :show]
 
