@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tech_category %>
+
+<div>
+  <%= link_to "Edit this tech category", edit_tech_category_path(@tech_category) %> |
+  <%= link_to "Back to tech categories", tech_categories_path %>
+
+  <%= button_to "Destroy this tech category", @tech_category, method: :delete %>
+</div>

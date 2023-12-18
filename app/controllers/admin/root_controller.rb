@@ -2,6 +2,10 @@ module Admin
   class RootController < ApplicationController
     before_action :ensure_admin_session
 
+    def index
+
+    end
+
     def set_admin_session
       session[:admin] = true
     end

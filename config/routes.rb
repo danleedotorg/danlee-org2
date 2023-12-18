@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'about/index'
   resources :blogs, only: [:index, :show]
 
+  resources :tech_categories, controller: 'admin/tech_categories'
+  get 'admin' => 'admin/root#index'
   namespace :admin do
     resources :sessions, only: [:new, :create]
     get 'session' => 'admin/session#new'
