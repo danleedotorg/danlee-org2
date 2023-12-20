@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Job histories technologies</h1>
+
+<div id="job_histories_technologies">
+  <% @job_histories_technologies.each do |job_histories_technologies| %>
+    <%= render job_histories_technologies %>
+  <% end %>
+</div>
+
+<%= link_to "New job histories technologies", new_job_histories_technologies_path %>

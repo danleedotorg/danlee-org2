@@ -41,8 +41,10 @@
     <noscript>
       Please enable javascript to see job descriptions
     </noscript>
-    <%= render 'about/job_history/dish_network' %>
-    <%= render 'about/job_history/dish_network' %>
+
+    <% @job_histories.each do |job_history| %>
+      <%= render 'about/job_history', job_history: job_history %>
+    <% end %>
 
   </section>
 </div>

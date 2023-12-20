@@ -67,7 +67,7 @@ module Admin
 
     # Only allow a list of trusted parameters through.
     def job_history_params
-      params.require(:job_history).permit(:company_name, :start_date, :end_date)
+      params.require(:job_history).permit(:company_name, :job_title, :start_date, :end_date)
     end
   end
 end

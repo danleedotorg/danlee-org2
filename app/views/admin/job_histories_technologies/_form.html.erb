@@ -1,0 +1,27 @@
+<%= form_with(model: job_histories_technologies) do |form| %>
+  <% if job_histories_technologies.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(job_histories_technologies.errors.count, "error") %> prohibited this job_histories_technologies from being saved:</h2>
+
+      <ul>
+        <% job_histories_technologies.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :job_history_id, style: "display: block" %>
+    <%= form.select :job_history_id, job_histories.pluck(:company_name, :id) %>
+  </div>
+
+  <div>
+    <%= form.label :technology_id, style: "display: block" %>
+    <%= form.select :technology_id, technologies.map { |tech| ["#{tech.name} (#{tech.tech_category.name})", tech.id]} %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

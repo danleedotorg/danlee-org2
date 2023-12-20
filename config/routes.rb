@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :job_histories_technologies, controller: 'admin/job_histories_technologies'
   resources :achievements,  controller: 'admin/achievements'
   resources :job_histories,  controller: 'admin/job_histories'
   resources :technologies, controller: 'admin/technologies'

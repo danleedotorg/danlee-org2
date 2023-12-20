@@ -1,0 +1,1 @@
+json.partial! "job_histories_technologies/job_histories_technologies", job_histories_technologies: @job_histories_technologies
