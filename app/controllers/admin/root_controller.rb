@@ -3,7 +3,7 @@ module Admin
     before_action :ensure_admin_session
 
     def index
-
+      @helper_names = AdminRoutes.new.helper_names
     end
 
     def set_admin_session

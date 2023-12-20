@@ -1,3 +1,5 @@
-<h1>Models</h1>
+<h1>Paths</h1>
 
-<a href="<%= tech_categories_path %>">Tech Categories</a>
+<% @helper_names.each do |route_string| %>
+  <a href="<%= eval(route_string) %>"><%= route_string %></a><br />
+<% end %>
