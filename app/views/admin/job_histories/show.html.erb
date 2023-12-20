@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @job_history %>
+
+<div>
+  <%= link_to "Edit this job history", edit_job_history_path(@job_history) %> |
+  <%= link_to "Back to job histories", job_histories_path %>
+
+  <%= button_to "Destroy this job history", @job_history, method: :delete %>
+</div>
