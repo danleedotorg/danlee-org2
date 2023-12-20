@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DanleeOrg2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>DanleeOrg2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-  <body class="has-background-dark has-text-light">
-    <%= render 'layouts/navbar' %>
-    <main class="container ">
-      <%= yield %>
-    </main>
-  </body>
+<body class="has-background-dark has-text-light">
+<%= render 'layouts/navbar' %>
+<main class="container ">
+  <%= yield %>
+</main>
+</body>
 </html>

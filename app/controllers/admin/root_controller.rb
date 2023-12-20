@@ -18,7 +18,6 @@ module Admin
       session[:admin].present?
     end
 
-
     def admin_locked?
       locked = ENV['ADMIN_LOCKED']
       locked.blank? || locked == 'false'
