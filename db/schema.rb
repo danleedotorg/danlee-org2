@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_20_050202) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_20_050851) do
+  create_table "achievements", force: :cascade do |t|
+    t.text "summary"
+    t.integer "job_history_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_history_id"], name: "index_achievements_on_job_history_id"
+  end
+
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -76,6 +84,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_20_050202) do
     t.index ["tech_category_id"], name: "index_technologies_on_tech_category_id"
   end
 
+  add_foreign_key "achievements", "job_histories"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "technologies", "tech_categories"

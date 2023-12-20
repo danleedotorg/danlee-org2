@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :achievements,  controller: 'admin/achievements'
   resources :job_histories,  controller: 'admin/job_histories'
   resources :technologies, controller: 'admin/technologies'
   get 'about/index'
