@@ -7,7 +7,7 @@ class AdminRoutes
 
   def helper_names
     filter_helper_names!
-    @helper_names
+    @helper_names.sort
   end
 
   def filter_helper_names!
