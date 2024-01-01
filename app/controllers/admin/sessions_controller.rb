@@ -11,14 +11,6 @@ module Admin
       username = session_params[:username]
       password = session_params[:password]
 
-      pp ENV['ADMIN_USERNAME']
-      pp username
-      pp ENV['ADMIN_USERNAME'] == username
-
-      pp ENV['ADMIN_PASSWORD']
-      pp password
-      pp ENV['ADMIN_PASSWORD'] == password
-
       if username != ENV['ADMIN_USERNAME'] || password != ENV['ADMIN_PASSWORD']
         ENV['ADMIN_LOCKED'] = 'true'
         clear_admin_session

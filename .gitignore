@@ -35,3 +35,9 @@
 /config/master.key
 
 .idea
+
+# dotenv-rails https://github.com/bkeepers/dotenv?tab=readme-ov-file#can-i-use-dotenv-in-production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
