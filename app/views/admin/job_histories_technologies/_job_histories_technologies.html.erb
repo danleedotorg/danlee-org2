@@ -1,12 +1,18 @@
 <div id="<%= dom_id job_histories_technologies %>">
   <p>
-    <strong>Job histories:</strong>
-    <%= job_histories_technologies.job_history_id %>
+    <strong>Job History Company Name:</strong>
+    <%= job_histories_technologies.job_history.company_name %>
   </p>
 
-  <p>
-    <strong>Technologies:</strong>
-    <%= job_histories_technologies.technology_id %>
-  </p>
+  <div class="ml-5">
+    <p>
+      <strong>Technology:</strong>
+      <%= job_histories_technologies.technology.name %>
+    </p>
 
+    <p>
+      <strong>Category:</strong>
+      <%= job_histories_technologies.technology.tech_category.name %>
+    </p>
+  </div>
 </div>

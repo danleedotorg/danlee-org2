@@ -1,0 +1,12 @@
+<h4 class="is-size-3 is-underlined mt-5">Notable Achievements</h4>
+<% achievements.each do |achievement| %>
+  <div class="ml-4">
+    <h5 class="is-size-4"><%= achievement.summary %></h5>
+    <details class="ml-4">
+      <summary>Deep Dive</summary>
+      <div class="box has-background-grey-dark has-text-info-light">
+        <%= achievement.deep_dive %>
+      </div>
+    </details>
+  </div>
+<% end %>

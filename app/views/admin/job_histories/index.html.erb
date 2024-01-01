@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Job histories</h1>
-
 <div id="job_histories">
   <% @job_histories.each do |job_history| %>
-    <%= render job_history %>
-    <p>
-      <%= link_to "Show this job history", job_history %>
-    </p>
+    <div class="box">
+      <%= render job_history %>
+      <p class="has-text-right">
+        <%= link_to "Edit this job history", edit_job_history_path(job_history), class: 'button' %>
+      </p>
+    </div>
   <% end %>
 </div>
-
 <%= link_to "New job history", new_job_history_path %>

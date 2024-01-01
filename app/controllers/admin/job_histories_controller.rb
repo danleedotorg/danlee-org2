@@ -62,7 +62,7 @@ module Admin
 
     # Use callbacks to share common setup or constraints between actions.
     def set_job_history
-      @job_history = JobHistory.find(params[:id])
+      @job_history = JobHistory.eager_load(:achievements, :technologies => :tech_category).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

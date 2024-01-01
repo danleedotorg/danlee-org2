@@ -1,66 +1,67 @@
 module Admin
-class AchievementsController < Admin::RootController
-  before_action :set_achievement, only: %i[ show edit update destroy ]
+  class AchievementsController < Admin::RootController
+    before_action :set_achievement, only: %i[ show edit update destroy ]
 
-  # GET /achievements or /achievements.json
-  def index
-    @achievements = Achievement.all
-  end
+    # GET /achievements or /achievements.json
+    def index
+      @achievements = Achievement.all
+    end
 
-  # GET /achievements/1 or /achievements/1.json
-  def show
-  end
+    # GET /achievements/1 or /achievements/1.json
+    def show
+    end
 
-  # GET /achievements/new
-  def new
-    @achievement = Achievement.new
-    @job_histories = JobHistory.all
-  end
+    # GET /achievements/new
+    def new
+      @achievement = Achievement.new
+      @job_histories = JobHistory.all
+    end
 
-  # GET /achievements/1/edit
-  def edit
-    @job_histories = JobHistory.all
-  end
+    # GET /achievements/1/edit
+    def edit
+      @job_histories = JobHistory.all
+    end
 
-  # POST /achievements or /achievements.json
-  def create
-    @achievement = Achievement.new(achievement_params)
+    # POST /achievements or /achievements.json
+    def create
+      @achievement = Achievement.new(achievement_params)
 
-    respond_to do |format|
-      if @achievement.save
-        format.html { redirect_to achievement_url(@achievement), notice: "Achievement was successfully created." }
-        format.json { render :show, status: :created, location: @achievement }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @achievement.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @achievement.save
+          format.html { redirect_to achievement_url(@achievement), notice: "Achievement was successfully created." }
+          format.json { render :show, status: :created, location: @achievement }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @achievement.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # PATCH/PUT /achievements/1 or /achievements/1.json
-  def update
-    respond_to do |format|
-      if @achievement.update(achievement_params)
-        format.html { redirect_to achievement_url(@achievement), notice: "Achievement was successfully updated." }
-        format.json { render :show, status: :ok, location: @achievement }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @achievement.errors, status: :unprocessable_entity }
+    # PATCH/PUT /achievements/1 or /achievements/1.json
+    def update
+      respond_to do |format|
+        if @achievement.update(achievement_params)
+          format.html { redirect_to achievement_url(@achievement), notice: "Achievement was successfully updated." }
+          format.json { render :show, status: :ok, location: @achievement }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @achievement.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # DELETE /achievements/1 or /achievements/1.json
-  def destroy
-    @achievement.destroy!
+    # DELETE /achievements/1 or /achievements/1.json
+    def destroy
+      @achievement.destroy!
 
-    respond_to do |format|
-      format.html { redirect_to achievements_url, notice: "Achievement was successfully destroyed." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to achievements_url, notice: "Achievement was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
-  end
 
-  private
+    private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_achievement
       @achievement = Achievement.find(params[:id])
@@ -70,5 +71,5 @@ class AchievementsController < Admin::RootController
     def achievement_params
       params.require(:achievement).permit(:summary, :job_history_id, :deep_dive)
     end
-end
+  end
 end

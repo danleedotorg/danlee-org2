@@ -1,5 +1,6 @@
 class AdminRoutes
   attr_reader :helper_names
+
   def initialize
     @helper_names = Rails.application.routes.named_routes.helper_names
   end

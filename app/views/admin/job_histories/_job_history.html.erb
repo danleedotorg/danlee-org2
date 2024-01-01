@@ -18,5 +18,19 @@
     <strong>End date:</strong>
     <%= job_history.end_date %>
   </p>
+  <h3 class="is-size-5">Achievements</h3>
 
+  <% job_history.achievements.each do |achievement| %>
+    <%= render partial: 'admin/job_histories/achievement', locals: { achievement: achievement } %>
+  <% end %>
+
+  <% if job_history.technologies.present? %>
+    <h3 class="is-size-5">Technologies</h3>
+
+    <div class="ml-5">
+      <% job_history.technologies.each do |technology| %>
+        <%= render partial: 'admin/technologies/technology', locals: { technology: technology } %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

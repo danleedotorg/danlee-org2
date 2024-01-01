@@ -70,5 +70,4 @@ module Admin
       params.require(:blog).permit(:content)
     end
   end
-
 end

@@ -1,13 +1,13 @@
 import {Controller} from "@hotwired/stimulus"
 
 export default class extends Controller {
-	static targets = ["navBurger", "navMenu"]
+  static targets = ["navBurger", "navMenu"]
 
-	connect() {
-	}
+  connect() {
+  }
 
-	toggleMobileMenu() {
-		this.navBurgerTarget.classList.toggle('is-active');
-		this.navMenuTarget.classList.toggle('is-active');
-	}
+  toggleMobileMenu() {
+    this.navBurgerTarget.classList.toggle('is-active');
+    this.navMenuTarget.classList.toggle('is-active');
+  }
 }
